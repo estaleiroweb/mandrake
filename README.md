@@ -23,7 +23,7 @@ You can easyly to implement all magic methods or part of them
 
 # Upgrade
 
-> pip install mandrake -upgrade
+> pip install mandrake --upgrade
 
 # Use
 
