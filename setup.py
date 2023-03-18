@@ -5,7 +5,7 @@ import shutil
 from setuptools import setup, find_packages
 
 def getVersion() -> str:
-    assert os.path.isfile(f'version.py')
+    assert os.path.isfile(f'{rootdir}/{projectPath}/version.py')
     try:
         lpros = ['git', 'describe', '--tags']
         sb = subprocess.run(lpros, stdout=subprocess.PIPE)
@@ -13,7 +13,7 @@ def getVersion() -> str:
     except:
         ver = ''
     if ver == '':
-        with open(f'VERSION', 'r', encoding='utf-8') as fh:
+        with open(f'{rootdir}/{projectPath}/VERSION', 'r', encoding='utf-8') as fh:
             ver =fh.read().strip()
     if ver == '':
         ver = '0.0.1'
@@ -27,7 +27,7 @@ def getVersion() -> str:
 
     assert '-' not in ver
     assert '.' in ver
-    with open(f'VERSION', 'w', encoding='utf-8') as fh:
+    with open(f'{rootdir}/{projectPath}/VERSION', 'w', encoding='utf-8') as fh:
         fh.write('%s\n' % ver)
     return ver
 
@@ -66,10 +66,7 @@ try: shutil.rmtree(rootdir+'/magic_methods.egg-info',)
 except: ...
 
 projectName = os.path.basename(rootdir)
-print(getVersion())
-quit()
-
-# projectPath = projectName.replace('-', '')
+projectPath = projectName.replace('-', '')
 licence = getLicence()
 dictSetup = {
     'name': projectName,
