@@ -15,26 +15,26 @@ You can easyly to implement all magic methods or part of them
 
 **URL**: [http://estaleiroweb.com.br](http://estaleiroweb.com.br)
 
-**GIT**: [https://github.com/HelbertFernandes/magic_methods](https://github.com/HelbertFernandes/magic_methods)
+**GIT**: [https://github.com/estaleiroweb/mandrake](https://github.com/HelbertFernandes/mandrake)
 
 # Instalation
 
-> pip install magic_methods
+> pip install mandrake
 
 # Upgrade
 
-> pip install magic_methods -upgrade
+> pip install mandrake -upgrade
 
 # Use
 
 ```python
-from magicmethods import AllMethods
+from mandrake import AllMethods
 
 class MyClass(AllMethods): ...
 ```
 
 ```python
-from magicmethods import AttributeMethods
+from mandrake import AttributeMethods
 
 class MyClass(AttributeMethods):
    def __init__(self):

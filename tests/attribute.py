@@ -1,8 +1,8 @@
 import sys
 import os
 sys.path.append(os.path.abspath(__file__ + '/../..'))
-from magicmethods import AttributeMethods
-# from ..magicmethods import AttributeMethods
+from mandrake import AttributeMethods
+# from ..mandrake import AttributeMethods
 
 class MyClass(AttributeMethods):
     def __init__(self):
